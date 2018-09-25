@@ -3,7 +3,7 @@
 <div class="container">
 {{#each model.trending as |trending|}}
 	{{#paper-card as |card|}}
-      {{card.image src=(concat 'https://image.tmdb.org/t/p/w500/' trending.poster_path) alt="Washed Out" title="Washed Out"}}
+      {{card.image src=(concat 'https://image.tmdb.org/t/p/w500/' trending.poster_path) alt="Washed Out" title=trending.title}}
      
       
       {{#card.actions class="layout-row layout-align-start-center" as |actions|}}
@@ -26,7 +26,7 @@
 <div class="container">
 {{#each model.upcoming as |upcoming|}}
   {{#paper-card as |card|}}
-      {{card.image src=(concat 'https://image.tmdb.org/t/p/w500/' upcoming.poster_path) alt="Washed Out" title="Washed Out"}}
+      {{card.image src=(concat 'https://image.tmdb.org/t/p/w500/' upcoming.poster_path) alt="Washed Out" title=upcoming.title}}
      
       
       {{#card.actions class="layout-row layout-align-start-center" as |actions|}}

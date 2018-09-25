@@ -1,0 +1,20 @@
+{{#paper-toolbar as |toolbar|}}
+   {{#toolbar.tools}}
+     {{#paper-button}}
+       Home
+     {{/paper-button}}
+     {{#paper-button}}
+       Favourite
+     {{/paper-button}}
+     <h2>MOviE HeRE</h2>
+     <span class="flex"></span>
+     {{#paper-button raised=true}}
+       Learn More
+     {{/paper-button}}
+     {{#paper-button mini=true aria-label="Favorite"}}
+      {{paper-icon "favorite"}}
+     {{/paper-button}}
+   {{/toolbar.tools}}
+ {{/paper-toolbar}}
+
+{{outlet}}

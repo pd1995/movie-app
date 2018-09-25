@@ -1,0 +1,46 @@
+ {{outlet}}
+<h2>TRENDING</h2>
+<div class="container">
+{{#each model.trending as |trending|}}
+	{{#paper-card as |card|}}
+      {{card.image src=(concat 'https://image.tmdb.org/t/p/w500/' trending.poster_path) alt="Washed Out" title="Washed Out"}}
+     
+      
+      {{#card.actions class="layout-row layout-align-start-center" as |actions|}}
+        {{#actions.icons}}
+          {{#paper-button iconButton=true}}{{paper-icon 'favorite'}}{{/paper-button}}
+          {{#paper-button iconButton=true}}{{paper-icon 'share'}}{{/paper-button}}
+        {{/actions.icons}}
+        
+        {{#paper-button onClick=(action 'some_action' trending)}}
+        Details
+        {{/paper-button}}
+      {{/card.actions}}
+     
+    {{/paper-card}}
+    
+{{/each}}
+</div>
+
+<h2>UPCOMING</h2>
+<div class="container">
+{{#each model.upcoming as |upcoming|}}
+  {{#paper-card as |card|}}
+      {{card.image src=(concat 'https://image.tmdb.org/t/p/w500/' upcoming.poster_path) alt="Washed Out" title="Washed Out"}}
+     
+      
+      {{#card.actions class="layout-row layout-align-start-center" as |actions|}}
+        {{#actions.icons}}
+          {{#paper-button iconButton=true}}{{paper-icon 'favorite'}}{{/paper-button}}
+          {{#paper-button iconButton=true}}{{paper-icon 'share'}}{{/paper-button}}
+        {{/actions.icons}}
+        
+        {{#paper-button onClick=(action 'some_action' upcoming)}}
+        Details
+        {{/paper-button}}
+      {{/card.actions}}
+     
+    {{/paper-card}}
+    
+{{/each}}
+</div>

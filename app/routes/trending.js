@@ -9,7 +9,9 @@ export default Route.extend({
        return model_obj;  
          }
 		 
-	
+// 	setupController (controller, model)  {
+//       this._super(controller, model);
+// }
 
 	// actions : {
 		// transitionToDetails(trending) {

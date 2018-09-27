@@ -9,6 +9,9 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('trending');
   this.route('details', {path: '/details/:id'});
+  this.route('favourite');
+  this.route('myfavourite');
+  this.route('search');
 });
 
 export default Router;

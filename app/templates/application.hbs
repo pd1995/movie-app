@@ -5,17 +5,19 @@
        Home
        {{/link-to}}
      {{/paper-button}}
-     {{#paper-button}}
-       Favourite
+    {{#paper-button mini=true aria-label="Favorite"}}
+    {{#link-to "myfavourite" class="button"}}
+      {{paper-icon "favorite"}}
+      {{/link-to}}
      {{/paper-button}}
      <h2>MOviE HeRE</h2>
      <span class="flex"></span>
-     {{#paper-button raised=true}}
-       Learn More
-     {{/paper-button}}
-     {{#paper-button mini=true aria-label="Favorite"}}
-      {{paper-icon "favorite"}}
-     {{/paper-button}}
+     {{#link-to "search"}}
+      {{#paper-button}}
+        Search
+      {{/paper-button}}
+      {{/link-to}}
+     
    {{/toolbar.tools}}
  {{/paper-toolbar}}
 

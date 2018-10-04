@@ -7,11 +7,11 @@ export default Controller.extend({
 			this.transitionToRoute("details", x.get('id'), {queryParams: {modelName: x.constructor.modelName}});
 		},
 		addToFavourites(movie) {
-      let favourite = this.store.createRecord('favourite', {
+      let favourite = this.store.createRecord('myfavourite', {
         id: movie.get('id'),
         poster_path : movie.get('poster_path')
       });
-      favourite.save();
+      myfavourite.save();
     }
 	
     

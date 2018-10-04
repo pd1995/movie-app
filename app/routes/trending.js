@@ -2,6 +2,7 @@ import Route from '@ember/routing/route';
 
 export default Route.extend({
 	model(){
+		//making a request to store to fetch data by creating objects of upcoming and trending
               let model_obj = {
           			 trending: this.store.findAll('trending'),
            			upcoming: this.store.findAll('upcoming')
@@ -9,18 +10,4 @@ export default Route.extend({
        return model_obj;  
          }
 		 
-// 	setupController (controller, model)  {
-//       this._super(controller, model);
-// }
-
-	// actions : {
-		// transitionToDetails(trending) {
-		// 	console.log("action executed")
-		// 	// console.log(trending, "fdsdfsdfsdf")
-		// 	this.transitionTo('details', trending.get("id"));
-		// },
-		// some_action(x){
-		// 	console.log(x.get('id'))
-		// }
-	// }
 });

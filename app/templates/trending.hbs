@@ -12,7 +12,7 @@
           {{#paper-button iconButton=true}}{{paper-icon 'share'}}{{/paper-button}}
         {{/actions.icons}}
         
-        {{#paper-button onClick=(action 'some_action' trending)}}
+        {{#paper-button onClick=(action 'addToDetails' trending)}}
         Details
         {{/paper-button}}
       {{/card.actions}}
@@ -35,7 +35,7 @@
           {{#paper-button iconButton=true}}{{paper-icon 'share'}}{{/paper-button}}
         {{/actions.icons}}
         
-        {{#paper-button onClick=(action 'some_action' upcoming)}}
+        {{#paper-button onClick=(action 'addToDetails' upcoming)}}
         Details
         {{/paper-button}}
       {{/card.actions}}

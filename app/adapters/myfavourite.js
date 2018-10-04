@@ -3,10 +3,11 @@ import Em from 'ember';
 
 export default DS.RESTAdapter.extend({
   buildURL(){
-
+    
     return `http://localhost:3000/favourites`
   },
   createRecord(store, type, snapshot) {
+    //to create a record to json
     let data = this.serialize(snapshot);
 
     return new Promise((resolve, reject) => {
@@ -24,6 +25,7 @@ export default DS.RESTAdapter.extend({
     })
   },
   deleteRecord(store, type, snapshot) {
+    //delete record from json
     let data = this.serialize(snapshot);
 
     return new Promise((resolve, reject) => {

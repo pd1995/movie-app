@@ -1,15 +1,17 @@
 {{#paper-toolbar as |toolbar|}}
    {{#toolbar.tools}}
-     {{#paper-button}}
      {{#link-to "trending" class="button"}}
+     {{#paper-button}}
+     
        Home
-       {{/link-to}}
-     {{/paper-button}}
-    {{#paper-button mini=true aria-label="Favorite"}}
+       
+     {{/paper-button}}{{/link-to}}
+    
     {{#link-to "myfavourite" class="button"}}
+    {{#paper-button mini=true aria-label="Favorite"}}
       {{paper-icon "favorite"}}
-      {{/link-to}}
-     {{/paper-button}}
+      
+     {{/paper-button}}{{/link-to}}
      <h2>MOviE HeRE</h2>
      <span class="flex"></span>
      {{#link-to "search"}}
